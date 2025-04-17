@@ -2,12 +2,14 @@ import { useEffect } from "react";
 
 const Modal = () => {
   useEffect(() => {
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       console.log(`Interval - ${Date.now()}`);
     }, 2000);
-  }, []);
 
-  return <div>Modal</div>;
-};
+    return () => {
+      
+      clearInterval(intervalId);
+    };
+  }, []);
 
 export default Modal;
