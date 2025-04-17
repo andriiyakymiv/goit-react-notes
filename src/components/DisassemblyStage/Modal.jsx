@@ -10,6 +10,6 @@ const Modal = () => {
       
       clearInterval(intervalId);
     };
-  }, []);
-
-export default Modal;
+  }
+    , [])
+};
